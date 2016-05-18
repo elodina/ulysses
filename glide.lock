@@ -1,0 +1,112 @@
+hash: ad5ad60a9487bc8472b985fd600fbb852cb59143a255ee926bd2838c1a646b6f
+updated: 2016-05-18T01:33:45.184363573Z
+imports:
+- name: github.com/elodina/go-avro
+  version: ""
+- name: github.com/elodina/go-kafka-avro
+  version: ""
+- name: github.com/elodina/go-mesos-utils
+  version: ""
+  subpackages:
+  - pretty
+- name: github.com/elodina/go-zipkin
+  version: ""
+- name: github.com/elodina/gonzo
+  version: ""
+- name: github.com/elodina/siesta
+  version: ""
+- name: github.com/elodina/siesta-producer
+  version: ""
+- name: github.com/elodina/stack-deploy
+  version: ""
+  subpackages:
+  - framework
+- name: github.com/fatih/structs
+  version: ""
+- name: github.com/gambol99/go-marathon
+  version: ""
+- name: github.com/gocql/gocql
+  version: ""
+  subpackages:
+  - internal/lru
+  - internal/murmur
+  - internal/streams
+- name: github.com/gogo/protobuf
+  version: ""
+  subpackages:
+  - proto
+- name: github.com/golang/glog
+  version: ""
+- name: github.com/golang/protobuf
+  version: ""
+  subpackages:
+  - proto
+- name: github.com/golang/snappy
+  version: ""
+- name: github.com/hailocab/go-hostpool
+  version: ""
+- name: github.com/hashicorp/errwrap
+  version: ""
+- name: github.com/hashicorp/go-cleanhttp
+  version: ""
+- name: github.com/hashicorp/go-multierror
+  version: ""
+- name: github.com/hashicorp/go-rootcerts
+  version: ""
+- name: github.com/hashicorp/hcl
+  version: ""
+  subpackages:
+  - hcl/ast
+  - hcl/parser
+  - hcl/scanner
+  - hcl/strconv
+  - hcl/token
+  - json/parser
+  - json/scanner
+  - json/token
+- name: github.com/hashicorp/vault
+  version: ""
+  subpackages:
+  - api
+- name: github.com/julienschmidt/httprouter
+  version: ""
+- name: github.com/mesos/mesos-go
+  version: ""
+  subpackages:
+  - executor
+  - mesosproto
+  - mesosutil
+  - scheduler
+  - mesosutil/process
+  - messenger
+  - messenger/sessionid
+  - upid
+  - mesosproto/scheduler
+- name: github.com/mitchellh/cli
+  version: ""
+- name: github.com/mitchellh/go-homedir
+  version: ""
+- name: github.com/mitchellh/mapstructure
+  version: ""
+- name: github.com/pborman/uuid
+  version: ""
+- name: github.com/rcrowley/go-metrics
+  version: ""
+- name: github.com/satori/go.uuid
+  version: ""
+- name: github.com/yanzay/cfg
+  version: ""
+- name: golang.org/x/net
+  version: ""
+  subpackages:
+  - context
+- name: gopkg.in/cihub/seelog.v2
+  version: ""
+- name: gopkg.in/inf.v0
+  version: ""
+- name: gopkg.in/spacemonkeygo/monitor.v1
+  version: ""
+  subpackages:
+  - trace
+  - trace/gen-go/zipkin
+devImports: []
