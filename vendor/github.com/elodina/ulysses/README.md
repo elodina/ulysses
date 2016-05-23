@@ -1,2 +1,0 @@
-# ulysses
-Go Network Security

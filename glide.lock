@@ -1,60 +1,42 @@
-hash: ad5ad60a9487bc8472b985fd600fbb852cb59143a255ee926bd2838c1a646b6f
-updated: 2016-05-18T01:33:45.184363573Z
+hash: caeba981c3fcef6e78620ece14f088a287636501715425b6a3140576b5d22afe
+updated: 2016-05-23T15:44:08.420140606+03:00
 imports:
 - name: github.com/elodina/go-avro
-  version: ""
-- name: github.com/elodina/go-kafka-avro
-  version: ""
-- name: github.com/elodina/go-mesos-utils
-  version: ""
-  subpackages:
-  - pretty
-- name: github.com/elodina/go-zipkin
-  version: ""
+  version: 0c8185d9a3ba82aeac98db3313a268a5b6df99b5
 - name: github.com/elodina/gonzo
-  version: ""
+  version: 2a93a3ba36390ca22fb6c3e6db2eca699314bf17
 - name: github.com/elodina/siesta
-  version: ""
+  version: fea3d8822e875ffef3895e68f5c2f172e0dd4300
 - name: github.com/elodina/siesta-producer
-  version: ""
-- name: github.com/elodina/stack-deploy
-  version: ""
-  subpackages:
-  - framework
+  version: a374fc36c515243efb438aed41c536af55d8b19b
 - name: github.com/fatih/structs
-  version: ""
-- name: github.com/gambol99/go-marathon
-  version: ""
+  version: 73c4e3dc02a78deaba8640d5f3a8c236ec1352bf
 - name: github.com/gocql/gocql
-  version: ""
+  version: 2e0390b6fbe023664fcdaa9767f0f83fbe78956d
   subpackages:
   - internal/lru
   - internal/murmur
   - internal/streams
 - name: github.com/gogo/protobuf
-  version: ""
+  version: c18eea6ad611eecf94a9ba38471f59706199409e
   subpackages:
   - proto
 - name: github.com/golang/glog
-  version: ""
-- name: github.com/golang/protobuf
-  version: ""
-  subpackages:
-  - proto
+  version: 23def4e6c14b4da8ac2ed8007337bc5eb5007998
 - name: github.com/golang/snappy
-  version: ""
+  version: 43fea289edce21979658cbbdb3925390890aa86e
 - name: github.com/hailocab/go-hostpool
-  version: ""
+  version: e80d13ce29ede4452c43dea11e79b9bc8a15b478
 - name: github.com/hashicorp/errwrap
-  version: ""
+  version: 7554cd9344cec97297fa6649b055a8c98c2a1e55
 - name: github.com/hashicorp/go-cleanhttp
-  version: ""
+  version: ad28ea4487f05916463e2423a55166280e8254b5
 - name: github.com/hashicorp/go-multierror
-  version: ""
+  version: d30f09973e19c1dfcd120b2d9c4f168e68d6b5d5
 - name: github.com/hashicorp/go-rootcerts
-  version: ""
+  version: 6bb64b370b90e7ef1fa532be9e591a81c3493e00
 - name: github.com/hashicorp/hcl
-  version: ""
+  version: 9a905a34e6280ce905da1a32344b25e81011197a
   subpackages:
   - hcl/ast
   - hcl/parser
@@ -65,48 +47,40 @@ imports:
   - json/scanner
   - json/token
 - name: github.com/hashicorp/vault
-  version: ""
+  version: d63d8f68e60c6a089f6dc31cc15c28dae6348983
   subpackages:
   - api
 - name: github.com/julienschmidt/httprouter
-  version: ""
+  version: 77366a47451a56bb3ba682481eed85b64fea14e8
 - name: github.com/mesos/mesos-go
-  version: ""
+  version: 7064d8760d60f029f568b9295e6842612e89e347
   subpackages:
   - executor
   - mesosproto
   - mesosutil
-  - scheduler
   - mesosutil/process
   - messenger
   - messenger/sessionid
   - upid
   - mesosproto/scheduler
-- name: github.com/mitchellh/cli
-  version: ""
 - name: github.com/mitchellh/go-homedir
-  version: ""
+  version: 981ab348d865cf048eb7d17e78ac7192632d8415
 - name: github.com/mitchellh/mapstructure
-  version: ""
+  version: d2dd0262208475919e1a362f675cfc0e7c10e905
 - name: github.com/pborman/uuid
-  version: ""
+  version: c55201b036063326c5b1b89ccfe45a184973d073
 - name: github.com/rcrowley/go-metrics
-  version: ""
+  version: eeba7bd0dd01ace6e690fa833b3f22aaec29af43
 - name: github.com/satori/go.uuid
-  version: ""
+  version: f9ab0dce87d815821e221626b772e3475a0d2749
 - name: github.com/yanzay/cfg
-  version: ""
+  version: 3b647091f880406fdb14edcb309ce750a38d3e85
 - name: golang.org/x/net
-  version: ""
+  version: 35ec611a141ee705590b9eb64d673f9e6dfeb1ac
   subpackages:
   - context
 - name: gopkg.in/cihub/seelog.v2
-  version: ""
+  version: d2c6e5aa9fbfdd1c624e140287063c7730654115
 - name: gopkg.in/inf.v0
-  version: ""
-- name: gopkg.in/spacemonkeygo/monitor.v1
-  version: ""
-  subpackages:
-  - trace
-  - trace/gen-go/zipkin
+  version: 3887ee99ecf07df5b447e9b00d9c0b2adaa9f3e4
 devImports: []

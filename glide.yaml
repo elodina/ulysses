@@ -1,24 +1,11 @@
 package: github.com/elodina/ulysses
 import:
 - package: github.com/elodina/go-avro
-- package: github.com/elodina/go-kafka-avro
-- package: github.com/elodina/go-mesos-utils
-  subpackages:
-  - pretty
-- package: github.com/elodina/go-zipkin
 - package: github.com/elodina/gonzo
 - package: github.com/elodina/siesta
 - package: github.com/elodina/siesta-producer
-- package: github.com/elodina/stack-deploy
-  subpackages:
-  - framework
-- package: github.com/gambol99/go-marathon
-- package: github.com/gogo/protobuf
-  subpackages:
-  - proto
-- package: github.com/golang/protobuf
-  subpackages:
-  - proto
+- package: github.com/gocql/gocql
+- package: github.com/golang/glog
 - package: github.com/hashicorp/vault
   subpackages:
   - api
@@ -27,14 +14,4 @@ import:
   subpackages:
   - executor
   - mesosproto
-  - mesosutil
-  - scheduler
-- package: github.com/mitchellh/cli
 - package: github.com/satori/go.uuid
-- package: golang.org/x/net
-  subpackages:
-  - context
-- package: gopkg.in/spacemonkeygo/monitor.v1
-  subpackages:
-  - trace
-  - trace/gen-go/zipkin

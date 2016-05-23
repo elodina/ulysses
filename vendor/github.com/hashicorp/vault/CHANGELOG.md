@@ -38,13 +38,23 @@ DEPRECATIONS/BREAKING CHANGES:
 
 FEATURES:
 
- * **AWS EC2 Auth Backend**: Provides a recure introduction mechanism for AWS EC2
-   instances allowing automated retrieval of Vault tokens. Unlike most Vault
-   authentication backends, this backend does not require first-deploying,
+ * **AWS EC2 Auth Backend**: Provides a secure introduction mechanism for AWS
+   EC2 instances allowing automated retrieval of Vault tokens. Unlike most
+   Vault authentication backends, this backend does not require first deploying
    or provisioning security-sensitive credentials (tokens, username/password,
-   client certificates,etc). Instead, it treats AWS as a Trusted Third Party
+   client certificates, etc). Instead, it treats AWS as a Trusted Third Party
    and uses the cryptographically signed dynamic metadata information that
-   uniquely represents each EC2 instance.
+   uniquely represents each EC2 instance. [Vault
+   Enterprise](https://www.hashicorp.com/vault.html) customers have access to a
+   turnkey client that speaks the backend API and makes access to a Vault token
+   easy.
+ * **Response Wrapping**: Nearly any response within Vault can now be wrapped
+   inside a single-use, time-limited token's cubbyhole, taking the [Cubbyhole
+   Authentication
+   Principles](https://www.hashicorp.com/blog/vault-cubbyhole-principles.html)
+   mechanism to its logical conclusion. Retrieving the original response is as
+   simple as a single API command or the new `vault unwrap` command. This makes
+   secret distribution easier and more secure, including secure introduction.
  * **Azure Physical Backend**: You can now use Azure blob object storage as
    your Vault physical data store [GH-1266]
  * **Consul Backend Health Checks**: The Consul backend will automatically
@@ -58,12 +68,13 @@ FEATURES:
    system- or mount-set values. This is useful, for instance, when the max TTL
    of the system or the `auth/token` mount must be set high to accommodate
    certain needs but you want more granular restrictions on tokens being issued
-   directly from `auth/token`. [GH-1399]
+   directly from the Token authentication backend at `auth/token`. [GH-1399]
 
 IMPROVEMENTS:
 
  * audit: Add the DisplayName value to the copy of the Request object embedded
    in the associated Response, to match the original Request object [GH-1387]
+ * audit: Enable auditing of the `seal` and `step-down` commands [GH-1435]
  * command/auth: Restore the previous authenticated token if the `auth` command
    fails to authenticate the provided token [GH-1233]
  * command/write: `-format` and `-field` can now be used with the `write`
@@ -79,11 +90,14 @@ IMPROVEMENTS:
  * credential/ldap: If `groupdn` is not configured, skip searching LDAP and
    only return policies for local groups, plus a warning [GH-1283]
  * credential/ldap: `vault list` support for users and groups [GH-1270]
+ * credential/ldap: Support for the `memberOf` attribute for group membership
+   searching [GH-1245]
  * credential/userpass: Add list support for users [GH-911]
  * credential/userpass: Remove user configuration paths from requiring sudo, in
    favor of normal ACL mechanisms [GH-1312]
  * secret/aws: Use chain credentials to allow environment/EC2 instance/shared
    providers [GH-307]
+ * secret/aws: Support for STS AssumeRole functionality [GH-1318]
  * secret/pki: Added `exclude_cn_from_sans` field to prevent adding the CN to
    DNS or Email Subject Alternate Names [GH-1220]
  * sys/capabilities: Enforce ACL checks for requests that query the capabilities

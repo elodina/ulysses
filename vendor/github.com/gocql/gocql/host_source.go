@@ -391,6 +391,5 @@ func (r *ringDescriber) refreshRing() error {
 	}
 
 	r.session.metadata.setPartitioner(partitioner)
-	r.session.policy.SetPartitioner(partitioner)
 	return nil
 }

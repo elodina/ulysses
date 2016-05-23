@@ -52,12 +52,6 @@ func New(s interface{}) *Struct {
 //   // Map will panic if Animal does not implement String().
 //   Field *Animal `structs:"field,string"`
 //
-// A tag value with the option of "flatten" used in a struct field is to flatten its fields
-// in the output map. Example:
-//
-//   // The FieldStruct's fields will be flattened into the output map.
-//   FieldStruct time.Time `structs:"flatten"`
-//
 // A tag value with the option of "omitnested" stops iterating further if the type
 // is a struct. Example:
 //
@@ -96,7 +90,7 @@ func (s *Struct) FillMap(out map[string]interface{}) {
 	for _, field := range fields {
 		name := field.Name
 		val := s.value.FieldByName(name)
-		isSubStruct := false
+
 		var finalVal interface{}
 
 		tagName, tagOpts := parseTag(field.Tag.Get(s.TagName))
@@ -121,7 +115,6 @@ func (s *Struct) FillMap(out map[string]interface{}) {
 			n := New(val.Interface())
 			n.TagName = s.TagName
 			m := n.Map()
-			isSubStruct = true
 			if len(m) == 0 {
 				finalVal = val.Interface()
 			} else {
@@ -139,13 +132,7 @@ func (s *Struct) FillMap(out map[string]interface{}) {
 			continue
 		}
 
-		if isSubStruct && (tagOpts.Has("flatten")) {
-			for k := range finalVal.(map[string]interface{}) {
-				out[k] = finalVal.(map[string]interface{})[k]
-			}
-		} else {
-			out[name] = finalVal
-		}
+		out[name] = finalVal
 	}
 }
 
