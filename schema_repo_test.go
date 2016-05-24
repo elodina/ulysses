@@ -32,7 +32,7 @@ func TestApp(t *testing.T) {
 		app := schema_repository.NewApp(schema_repository.DefaultRegistryConfig())
 		go app.Start()
 		Convey("Client should work properly", func() {
-			time.Sleep(500 * time.Millisecond) // waiting server to start
+			time.Sleep(2 * time.Second) // waiting server to start
 			fmt.Println("Creating new client")
 			client := kafro.NewCachedSchemaRegistryClient("http://localhost:8081")
 			rawSchema := "{\"namespace\": \"net.elodina.kafka.metrics\",\"type\": \"record\",\"name\": \"Timings\",\"fields\": [{\"name\": \"id\", \"type\": \"long\"},{\"name\": \"timings\",  \"type\": {\"type\":\"array\", \"items\": \"long\"} }]}"
