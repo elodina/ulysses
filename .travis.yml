@@ -17,7 +17,7 @@ before_install:
   - bin/kafka-server-start.sh config/server.properties &
   - bin/kafka-topics.sh --create --topic schemas --zookeeper localhost:2181 --partitions 1 --replication-factor 1
   - cd ..
-  - docker run -it --link cassandra:cassandra --rm cassandra cqlsh -f schema_repository/schemas.cql cassandra
+  - docker run -it --rm cassandra:3.5 cqlsh -f schema_repository/schemas.cql
 
 install:
   - go get github.com/Masterminds/glide
