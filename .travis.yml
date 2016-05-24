@@ -4,7 +4,7 @@ env:
   - GO15VENDOREXPERIMENT=1
 
 before_install:
-  - wget http://www-us.apache.org/dist/cassandra/3.5/apache-cassandra-3.5-bin.tar.gz && tar -xvzf apache-cassandra-3.5-bin.tar.gz && sh apache-cassandra-3.5/bin/cassandra
+  - docker run --name cassandra -d --net=host cassandra:3.5
   - wget https://archive.apache.org/dist/kafka/0.8.2.1/kafka_2.10-0.8.2.1.tgz
   - tar -xzf kafka_2.10-0.8.2.1.tgz
   - cd kafka_2.10-0.8.2.1
