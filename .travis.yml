@@ -17,7 +17,7 @@ before_install:
   - bin/kafka-server-start.sh config/server.properties &
   - bin/kafka-topics.sh --create --topic schemas --zookeeper localhost:2181 --partitions 1 --replication-factor 1
   - cd ..
-  - sleep 10
+  - sleep 30
   - docker run -it --rm --net=host -v $(pwd)/schema_repository:/schema_repository cassandra:3.5 cqlsh -f /schema_repository/schemas.cql
 
 install:
