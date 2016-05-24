@@ -6,7 +6,7 @@ CREATE TABLE avro.schemas (
   subject varchar,
   version int,
   avro_schema varchar,
-  PRIMARY KEY (client, id, subject, version)
+  PRIMARY KEY (client, subject, version)
 );
 
 CREATE TABLE avro.schemaids (
