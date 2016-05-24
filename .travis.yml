@@ -8,21 +8,19 @@ sudo: required
 services:
   - docker
 
-before_install:
+install:
   - docker run --name cassandra -d --net=host cassandra:3.5
   - wget https://archive.apache.org/dist/kafka/0.8.2.1/kafka_2.10-0.8.2.1.tgz
   - tar -xzf kafka_2.10-0.8.2.1.tgz
   - cd kafka_2.10-0.8.2.1
   - bin/zookeeper-server-start.sh config/zookeeper.properties &
   - bin/kafka-server-start.sh config/server.properties &
-  - bin/kafka-topics.sh --create --topic schemas --zookeeper localhost:2181 --partitions 1 --replication-factor 1
-  - cd ..
   - sleep 30
-  - docker run -it --rm --net=host -v $(pwd)/schema_repository:/schema_repository cassandra:3.5 cqlsh -f /schema_repository/schemas.cql
-
-install:
+  - cd ..
   - go get github.com/Masterminds/glide
   - go build
+  - bin/kafka-topics.sh --create --topic schemas --zookeeper localhost:2181 --partitions 1 --replication-factor 1
+  - docker run -it --rm --net=host -v $(pwd)/schema_repository:/schema_repository cassandra:3.5 cqlsh -f /schema_repository/schemas.cql
 
 go:
   - 1.5
