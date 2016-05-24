@@ -15,3 +15,5 @@ import:
   - executor
   - mesosproto
 - package: github.com/satori/go.uuid
+- package: github.com/elodina/go-kafka-avro
+- package: github.com/smartystreets/goconvey

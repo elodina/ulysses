@@ -1,42 +1,44 @@
-hash: caeba981c3fcef6e78620ece14f088a287636501715425b6a3140576b5d22afe
-updated: 2016-05-23T15:44:08.420140606+03:00
+hash: 2f0d483049d556f5b863269a14a715447a87f166ce515c3b8cb981fe0aad60ce
+updated: 2016-05-24T11:06:36.79424374+03:00
 imports:
 - name: github.com/elodina/go-avro
-  version: 0c8185d9a3ba82aeac98db3313a268a5b6df99b5
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
+- name: github.com/elodina/go-kafka-avro
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: github.com/elodina/gonzo
-  version: 2a93a3ba36390ca22fb6c3e6db2eca699314bf17
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: github.com/elodina/siesta
-  version: fea3d8822e875ffef3895e68f5c2f172e0dd4300
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: github.com/elodina/siesta-producer
-  version: a374fc36c515243efb438aed41c536af55d8b19b
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: github.com/fatih/structs
-  version: 73c4e3dc02a78deaba8640d5f3a8c236ec1352bf
+  version: ""
 - name: github.com/gocql/gocql
-  version: 2e0390b6fbe023664fcdaa9767f0f83fbe78956d
+  version: ""
   subpackages:
   - internal/lru
   - internal/murmur
   - internal/streams
 - name: github.com/gogo/protobuf
-  version: c18eea6ad611eecf94a9ba38471f59706199409e
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
   subpackages:
   - proto
 - name: github.com/golang/glog
-  version: 23def4e6c14b4da8ac2ed8007337bc5eb5007998
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: github.com/golang/snappy
-  version: 43fea289edce21979658cbbdb3925390890aa86e
+  version: ""
 - name: github.com/hailocab/go-hostpool
-  version: e80d13ce29ede4452c43dea11e79b9bc8a15b478
+  version: ""
 - name: github.com/hashicorp/errwrap
-  version: 7554cd9344cec97297fa6649b055a8c98c2a1e55
+  version: ""
 - name: github.com/hashicorp/go-cleanhttp
-  version: ad28ea4487f05916463e2423a55166280e8254b5
+  version: ""
 - name: github.com/hashicorp/go-multierror
-  version: d30f09973e19c1dfcd120b2d9c4f168e68d6b5d5
+  version: ""
 - name: github.com/hashicorp/go-rootcerts
-  version: 6bb64b370b90e7ef1fa532be9e591a81c3493e00
+  version: ""
 - name: github.com/hashicorp/hcl
-  version: 9a905a34e6280ce905da1a32344b25e81011197a
+  version: ""
   subpackages:
   - hcl/ast
   - hcl/parser
@@ -47,13 +49,13 @@ imports:
   - json/scanner
   - json/token
 - name: github.com/hashicorp/vault
-  version: d63d8f68e60c6a089f6dc31cc15c28dae6348983
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
   subpackages:
   - api
 - name: github.com/julienschmidt/httprouter
-  version: 77366a47451a56bb3ba682481eed85b64fea14e8
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: github.com/mesos/mesos-go
-  version: 7064d8760d60f029f568b9295e6842612e89e347
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
   subpackages:
   - executor
   - mesosproto
@@ -64,23 +66,25 @@ imports:
   - upid
   - mesosproto/scheduler
 - name: github.com/mitchellh/go-homedir
-  version: 981ab348d865cf048eb7d17e78ac7192632d8415
+  version: ""
 - name: github.com/mitchellh/mapstructure
-  version: d2dd0262208475919e1a362f675cfc0e7c10e905
+  version: ""
 - name: github.com/pborman/uuid
-  version: c55201b036063326c5b1b89ccfe45a184973d073
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: github.com/rcrowley/go-metrics
-  version: eeba7bd0dd01ace6e690fa833b3f22aaec29af43
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: github.com/satori/go.uuid
-  version: f9ab0dce87d815821e221626b772e3475a0d2749
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
+- name: github.com/smartystreets/goconvey
+  version: c53abc99456fa3402dd33c15ee51c3e545e04a3f
 - name: github.com/yanzay/cfg
-  version: 3b647091f880406fdb14edcb309ce750a38d3e85
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: golang.org/x/net
-  version: 35ec611a141ee705590b9eb64d673f9e6dfeb1ac
+  version: ""
   subpackages:
   - context
 - name: gopkg.in/cihub/seelog.v2
-  version: d2c6e5aa9fbfdd1c624e140287063c7730654115
+  version: 519006d9633c3a943942b9ebfc1f4ae79d23df2c
 - name: gopkg.in/inf.v0
-  version: 3887ee99ecf07df5b447e9b00d9c0b2adaa9f3e4
+  version: ""
 devImports: []
