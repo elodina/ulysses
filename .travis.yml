@@ -29,4 +29,4 @@ go:
   - 1.6
   - tip
 
-script: go test $(glide novendor)
+script: go test -v $(glide novendor)
