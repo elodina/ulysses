@@ -3,6 +3,11 @@ language: go
 env:
   - GO15VENDOREXPERIMENT=1
 
+sudo: required
+
+services:
+  - docker
+
 before_install:
   - docker run --name cassandra -d --net=host cassandra:3.5
   - wget https://archive.apache.org/dist/kafka/0.8.2.1/kafka_2.10-0.8.2.1.tgz
