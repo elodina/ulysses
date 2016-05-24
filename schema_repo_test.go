@@ -28,7 +28,7 @@ import (
 )
 
 func TestApp(t *testing.T) {
-	Convey("Given a schema registry server", t, func() {
+	SkipConvey("Given a schema registry server", t, func() {
 		app := schema_repository.NewApp(schema_repository.DefaultRegistryConfig())
 		go app.Start()
 		Convey("Client should work properly", func() {
