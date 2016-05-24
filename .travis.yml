@@ -1,5 +1,7 @@
 language: go
 
+install: GO15VENDOREXPERIMENT=1 go build
+
 go:
   - 1.5
   - 1.6
