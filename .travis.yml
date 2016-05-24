@@ -3,6 +3,9 @@ language: go
 env:
   - GO15VENDOREXPERIMENT=1
 
+services:
+  - cassandra
+
 before_install:
   - wget https://archive.apache.org/dist/kafka/0.8.2.1/kafka_2.10-0.8.2.1.tgz
   - tar -xzf kafka_2.10-0.8.2.1.tgz
