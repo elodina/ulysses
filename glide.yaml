@@ -23,3 +23,4 @@ import:
 - package: github.com/davecgh/go-spew
   subpackages:
   - spew
+- package: github.com/pmezard/go-difflib
