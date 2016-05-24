@@ -19,3 +19,7 @@ import:
 - package: github.com/smartystreets/goconvey
 - package: github.com/jtolds/gls
 - package: gopkg.in/stretchr/testify.v1
+- package: github.com/smartystreets/assertions
+- package: github.com/davecgh/go-spew
+  subpackages:
+  - spew
