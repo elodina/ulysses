@@ -24,3 +24,4 @@ import:
   subpackages:
   - spew
 - package: github.com/pmezard/go-difflib
+- package: github.com/stretchr/testify

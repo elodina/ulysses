@@ -1,20 +1,20 @@
-hash: 125e7040ed5381b540bbc3b6ae1452ea0c4084e8806a91d3d3f0dde4a02130cf
-updated: 2016-05-24T12:29:50.42730939+03:00
+hash: a804b33ff4c94a718c1daee6c3d21092bafa703d4c8fd2b18cd4a65e0c25a4d6
+updated: 2016-05-24T13:41:17.724034748+03:00
 imports:
 - name: github.com/davecgh/go-spew
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
   subpackages:
   - spew
 - name: github.com/elodina/go-avro
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/elodina/go-kafka-avro
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/elodina/gonzo
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/elodina/siesta
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/elodina/siesta-producer
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/fatih/structs
   version: ""
 - name: github.com/gocql/gocql
@@ -24,11 +24,11 @@ imports:
   - internal/murmur
   - internal/streams
 - name: github.com/gogo/protobuf
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
   subpackages:
   - proto
 - name: github.com/golang/glog
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/golang/snappy
   version: ""
 - name: github.com/hailocab/go-hostpool
@@ -53,15 +53,15 @@ imports:
   - json/scanner
   - json/token
 - name: github.com/hashicorp/vault
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
   subpackages:
   - api
 - name: github.com/jtolds/gls
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/julienschmidt/httprouter
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/mesos/mesos-go
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
   subpackages:
   - executor
   - mesosproto
@@ -76,27 +76,29 @@ imports:
 - name: github.com/mitchellh/mapstructure
   version: ""
 - name: github.com/pborman/uuid
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/pmezard/go-difflib
-  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/rcrowley/go-metrics
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/satori/go.uuid
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/smartystreets/assertions
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: github.com/smartystreets/goconvey
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
+- name: github.com/stretchr/testify
+  version: 6cb3b85ef5a0efef77caef88363ec4d4b5c0976d
 - name: github.com/yanzay/cfg
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: golang.org/x/net
   version: ""
   subpackages:
   - context
 - name: gopkg.in/cihub/seelog.v2
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 - name: gopkg.in/inf.v0
   version: ""
 - name: gopkg.in/stretchr/testify.v1
-  version: e55d7f83f99f19c51842e78a886ed37c1fc970b0
+  version: b97a799aa8e43a99baca4a686f67b60b04922445
 devImports: []

@@ -14,3 +14,11 @@ CREATE TABLE avro.schemaids (
   client varchar,
   PRIMARY KEY (client)
 );
+
+CREATE TABLE avro.configs (
+    client text,
+    global boolean,
+    subject text,
+    level text,
+    PRIMARY KEY (client, global, subject)
+);
