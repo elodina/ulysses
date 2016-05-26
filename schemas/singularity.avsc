@@ -1,0 +1,366 @@
+ {
+  "name": "singularity",
+  "type": "record",
+  "fields": [
+    {
+      "name": "APPLICATION_DESCRIPTION",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "APPLICATION_NAME",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "APPLICATION_TAG",
+      "type": ["null", "bytes"]
+    },
+    {
+      "name": "BGP_IPV4_NEXT_HOP",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "BPG_IPV6_NEXT_HOP",
+      "type": ["null", "bytes"]
+    },
+    {
+      "name": "DIRECTION",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "DST_AS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "DST_MASK",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "DST_TOS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "DST_TRAFFIC_INDEX",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "DST_VLAN",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "ENGINE_ID",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "ENGINE_TYPE",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FIRST_SWITCHED",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FLOWS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FLOW_ACTIVE_TIMEOUT",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FLOW_INACTIVE_TIMEOUT",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FLOW_SAMPLER_ID",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FLOW_SAMPLER_MODE",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FLOW_SAMPLER_RANDOM_INTERVAL",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FORWARDING_STATUS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "FRAGMENT_OFFSET",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "ICMP_TYPE",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IF_DESC",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "IF_NAME",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "INPUT_SNMP",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IN_BYTES",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IN_DST_MAC",
+      "type": ["null", "long"]
+    },
+    {
+      "name": "IN_PERMANENT_BYTES",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IN_PERMANENT_PKTS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IN_PKTS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IN_SRC_MAC",
+      "type": ["null", "long"]
+    },
+    {
+      "name": "IPV4_DST_ADDR",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV4_DST_PREFIX",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV4_IDENT",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV4_NEXT_HOP",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV4_SRC_ADDR",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV4_SRC_PREFIX",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV6_DST_ADDR",
+      "type": ["null", "bytes"]
+    },
+    {
+      "name": "IPV6_DST_MASK",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV6_FLOW_LABEL",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV6_NEXT_HOP",
+      "type": ["null", "bytes"]
+    },
+    {
+      "name": "IPV6_OPTION_HEADERS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IPV6_SRC_ADDR",
+      "type": ["null", "bytes"]
+    },
+    {
+      "name": "IPV6_SRC_MASK",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "IP_PROTOCOL_VERSION",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "L4_DST_PORT",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "L4_SRC_PORT",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "LAST_SWITCHED",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MAX_PKT_LNGTH",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MAX_TTL",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MIN_PKT_LNGTH",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MIN_TTL",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_1",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_10",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_2",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_3",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_4",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_5",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_6",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_7",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_8",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_LABEL_9",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_PAL_RD",
+      "type": ["null", "long"]
+    },
+    {
+      "name": "MPLS_PREFIX_LEN",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_TOP_LABEL_IP_ADDR",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MPLS_TOP_LABEL_TYPE",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MUL_DST_BYTES",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MUL_DST_PKTS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "MUL_IGMP_TYPE",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "OUTPUT_SNMP",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "OUT_BYTES",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "OUT_DST_MAC",
+      "type": ["null", "long"]
+    },
+    {
+      "name": "OUT_PKTS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "OUT_SRC_MAC",
+      "type": ["null", "long"]
+    },
+    {
+      "name": "PROTOCOL",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "SAMPLER_NAME",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "SAMPLING_ALGORITHM",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "SAMPLING_INTERVAL",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "SRC_AS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "SRC_MASK",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "SRC_TOS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "SRC_TRAFFIC_INDEX",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "SRC_VLAN",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "TCP_FLAGS",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "TOTAL_BYTES_EXP",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "TOTAL_FLOWS_EXP",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "TOTAL_PKTS_EXP",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "postipDiffServCodePoint",
+      "type": ["null", "int"]
+    },
+    {
+      "name": "replication_factor",
+      "type": ["null", "int"]
+    }
+  ]
+}
