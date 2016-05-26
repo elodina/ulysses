@@ -1,16 +1,24 @@
-CREATE KEYSPACE avro WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };
+CREATE KEYSPACE avro WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
-CREATE TABLE schemas (
+CREATE TABLE avro.schemas (
   client varchar,
   id int,
-  subject string,
+  subject varchar,
   version int,
-  schema varchar,
-  PRIMARY KEY (client, id, subject, version)
+  avro_schema varchar,
+  PRIMARY KEY (client, subject, version)
 );
 
-CREATE TABLE schemaids (
+CREATE TABLE avro.schemaids (
   id counter,
   client varchar,
   PRIMARY KEY (client)
+);
+
+CREATE TABLE avro.configs (
+    client text,
+    global boolean,
+    subject text,
+    level text,
+    PRIMARY KEY (client, global, subject)
 );

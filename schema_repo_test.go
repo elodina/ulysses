@@ -17,19 +17,22 @@ package main
 
 import (
 	"fmt"
-	avro "github.com/elodina/go-avro"
-	kafro "github.com/elodina/go-kafka-avro"
-	. "github.com/smartystreets/goconvey/convey"
-	"github.com/elodina/ulysses/schema_repository"
 	"sync"
 	"testing"
+	"time"
+
+	avro "github.com/elodina/go-avro"
+	kafro "github.com/elodina/go-kafka-avro"
+	"github.com/elodina/ulysses/schema_repository"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 func TestApp(t *testing.T) {
-	Convey("Given a schema registry server", t, func() {
+	SkipConvey("Given a schema registry server", t, func() {
 		app := schema_repository.NewApp(schema_repository.DefaultRegistryConfig())
 		go app.Start()
 		Convey("Client should work properly", func() {
+			time.Sleep(2 * time.Second) // waiting server to start
 			fmt.Println("Creating new client")
 			client := kafro.NewCachedSchemaRegistryClient("http://localhost:8081")
 			rawSchema := "{\"namespace\": \"net.elodina.kafka.metrics\",\"type\": \"record\",\"name\": \"Timings\",\"fields\": [{\"name\": \"id\", \"type\": \"long\"},{\"name\": \"timings\",  \"type\": {\"type\":\"array\", \"items\": \"long\"} }]}"

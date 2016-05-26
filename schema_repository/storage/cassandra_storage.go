@@ -18,8 +18,8 @@ package storage
 import (
 	"strings"
 
-	"github.com/gocql/gocql"
 	"github.com/elodina/ulysses/logging"
+	"github.com/gocql/gocql"
 )
 
 type CassandraStorage struct {
@@ -31,7 +31,7 @@ func NewCassandraStorage(urls string, protoVersion int, cqlVersion string) *Cass
 	cluster := gocql.NewCluster(nodes...)
 	cluster.CQLVersion = cqlVersion
 	cluster.ProtoVersion = protoVersion
-	cluster.Keyspace = "schema_registry"
+	cluster.Keyspace = "avro"
 	session, err := cluster.CreateSession()
 	if err != nil {
 		log.Fatal(err)

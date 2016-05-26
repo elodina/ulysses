@@ -195,21 +195,17 @@ type clientStream struct {
 }
 
 // awaitRequestCancel runs in its own goroutine and waits for the user
-// to cancel a RoundTrip request, its context to expire, or for the
-// request to be done (any way it might be removed from the cc.streams
-// map: peer reset, successful completion, TCP connection breakage,
-// etc)
-func (cs *clientStream) awaitRequestCancel(req *http.Request) {
-	ctx := reqContext(req)
-	if req.Cancel == nil && ctx.Done() == nil {
+// to either cancel a RoundTrip request (using the provided
+// Request.Cancel channel), or for the request to be done (any way it
+// might be removed from the cc.streams map: peer reset, successful
+// completion, TCP connection breakage, etc)
+func (cs *clientStream) awaitRequestCancel(cancel <-chan struct{}) {
+	if cancel == nil {
 		return
 	}
 	select {
-	case <-req.Cancel:
+	case <-cancel:
 		cs.bufPipe.CloseWithError(errRequestCanceled)
-		cs.cc.writeStreamReset(cs.ID, ErrCodeCancel, nil)
-	case <-ctx.Done():
-		cs.bufPipe.CloseWithError(ctx.Err())
 		cs.cc.writeStreamReset(cs.ID, ErrCodeCancel, nil)
 	case <-cs.done:
 	}
@@ -688,7 +684,6 @@ func (cc *ClientConn) RoundTrip(req *http.Request) (*http.Response, error) {
 
 	readLoopResCh := cs.resc
 	bodyWritten := false
-	ctx := reqContext(req)
 
 	for {
 		select {
@@ -721,14 +716,6 @@ func (cc *ClientConn) RoundTrip(req *http.Request) (*http.Response, error) {
 				cs.abortRequestBodyWrite(errStopReqBodyWriteAndCancel)
 			}
 			return nil, errTimeout
-		case <-ctx.Done():
-			cc.forgetStreamID(cs.ID)
-			if !hasBody || bodyWritten {
-				cc.writeStreamReset(cs.ID, ErrCodeCancel, nil)
-			} else {
-				cs.abortRequestBodyWrite(errStopReqBodyWriteAndCancel)
-			}
-			return nil, ctx.Err()
 		case <-req.Cancel:
 			cc.forgetStreamID(cs.ID)
 			if !hasBody || bodyWritten {
@@ -1297,14 +1284,13 @@ func (rl *clientConnReadLoop) handleResponse(cs *clientStream, f *MetaHeadersFra
 	cs.bufPipe = pipe{b: buf}
 	cs.bytesRemain = res.ContentLength
 	res.Body = transportResponseBody{cs}
-	go cs.awaitRequestCancel(cs.req)
+	go cs.awaitRequestCancel(cs.req.Cancel)
 
 	if cs.requestedGzip && res.Header.Get("Content-Encoding") == "gzip" {
 		res.Header.Del("Content-Encoding")
 		res.Header.Del("Content-Length")
 		res.ContentLength = -1
 		res.Body = &gzipReader{body: res.Body}
-		setResponseUncompressed(res)
 	}
 	return res, nil
 }
